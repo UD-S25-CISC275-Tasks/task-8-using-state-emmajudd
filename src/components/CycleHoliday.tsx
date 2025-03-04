@@ -14,8 +14,8 @@ export function CycleHoliday(): React.JSX.Element {
 
     // Define the next holiday in alphabetical order
     const nextAlphabetical: Record<Holiday, Holiday> = {
-        "🎃 Halloween": "🎄 Christmas",
         "🎄 Christmas": "🎆 New Year",
+        "🎃 Halloween": "🎄 Christmas",
         "🎆 New Year": "🦃 Thanksgiving",
         "🦃 Thanksgiving": "💖 Valentine's Day",
         "💖 Valentine's Day": "🎃 Halloween"
