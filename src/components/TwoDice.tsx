@@ -36,8 +36,8 @@ export function TwoDice(): React.JSX.Element {
     const [leftDie, setLeftDie] = useState<number>(first);
     const [rightDie, setRightDie] = useState<number>(second);
 
-    const rollLeft = () => setLeftDie(d6());
-    const rollRight = () => setRightDie(d6());
+    const rollLeft = () => {setLeftDie(d6())};
+    const rollRight = () => {setRightDie(d6())};
 
     const isWin = leftDie === rightDie && leftDie !== 1;
     const isLose = leftDie === rightDie && leftDie === 1;
@@ -47,8 +47,8 @@ export function TwoDice(): React.JSX.Element {
             <span data-testid="left-die">{leftDie}</span>
             <span data-testid="right-die">{rightDie}</span>
             <div>
-                <Button onClick={rollLeft}>Roll Left</Button>
-                <Button onClick={rollRight}>Roll Right</Button>
+                <Button onClick={() => {rollLeft()}}>Roll Left</Button>
+                <Button onClick={() => {rollRight()}}>Roll Right</Button>
             </div>
             {isWin && <p>Win</p>}
             {isLose && <p>Lose</p>}
