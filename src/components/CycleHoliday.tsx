@@ -12,7 +12,6 @@ type Holiday =
 export function CycleHoliday(): React.JSX.Element {
     const [holiday, setHoliday] = useState<Holiday>("💖 Valentine's Day");
 
-    // Define the next holiday in alphabetical order
     const nextAlphabetical: Record<Holiday, Holiday> = {
         "🎄 Christmas": "🎃 Halloween",
         "🎃 Halloween": "🎆 New Year",
@@ -21,7 +20,6 @@ export function CycleHoliday(): React.JSX.Element {
         "💖 Valentine's Day": "🎄 Christmas"
     };
 
-    // Define the next holiday by the calendar year order
     const nextByYear: Record<Holiday, Holiday> = {
         "🎆 New Year": "💖 Valentine's Day",
         "💖 Valentine's Day": "🎃 Halloween",
