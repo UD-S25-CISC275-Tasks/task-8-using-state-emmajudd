@@ -6,7 +6,7 @@ export function RevealAnswer(): React.JSX.Element {
 
     return (
         <div>
-            <Button onClick={ () => setValue(!value)}>Reveal Answer</Button>
+            <Button onClick={ () => { setValue(!value)}}>Reveal Answer</Button>
             {value && <p>42</p>}
         </div>
     )
