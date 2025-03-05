@@ -13,9 +13,8 @@ export function d6(): number {
 
 /**
  * I could not get this components test to stop running because I had to use
- * a while loop in the TwoDice function. I asked AI how to fix this and they
+ * a while loop in the TwoDice function. I asked AI how to fix this and it 
  * recommended using a helper function to handle the die.
- *  
  */
 function getDifferentRoll(exclude: number): number {
     let newRoll = d6();
@@ -24,7 +23,7 @@ function getDifferentRoll(exclude: number): number {
         newRoll = d6();
         attempts--;
     }
-    return newRoll !== exclude ? newRoll : (exclude % 6) + 1; // Pick a fallback if unlucky
+    return newRoll !== exclude ? newRoll : (exclude % 6) + 1;
 }
 
 const first = d6();
